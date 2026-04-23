@@ -1,0 +1,75 @@
+body {
+  background: #020617;
+  color: white;
+  font-family: Arial;
+  margin: 0;
+}
+
+.game {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #ff3b3b;
+}
+
+.subtitle {
+  color: #94a3b8;
+}
+
+.score {
+  margin: 15px;
+  font-size: 18px;
+}
+
+.threats {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,59,59,0.2);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.card h3 {
+  color: #ff3b3b;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  padding: 6px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ff3b3b;
+  background: transparent;
+  color: white;
+}
+
+.actions button:hover {
+  background: #ff3b3b;
+  color: black;
+}
+
+.result {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.locked {
+  opacity: 0.6;
+  pointer-events: none;
+}

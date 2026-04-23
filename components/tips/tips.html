@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Training Hub</title>
+
+  <link rel="stylesheet" href="tips.css">
+</head>
+
+<body>
+
+<section class="hub">
+
+  <h2>🧠 Cyber Training Hub</h2>
+  <p class="subtitle">Click missions to learn + complete tasks</p>
+
+  <div class="progress-box">
+    <p>Progress: <span id="progressText">0%</span></p>
+    <div class="bar">
+      <div class="fill" id="fill"></div>
+    </div>
+    <p>XP: <span id="xp">0</span></p>
+  </div>
+
+  <div class="missions">
+
+    <!-- MISSION -->
+    <div class="mission" onclick="toggleMission(this)">
+      <div class="title">🔐 Strong Password</div>
+      <div class="content">
+        Use at least 12 characters with symbols, numbers and letters.
+      </div>
+    </div>
+
+    <div class="mission" onclick="toggleMission(this)">
+      <div class="title">🎣 Phishing Awareness</div>
+      <div class="content">
+        Fake emails try to steal your data. Always check sender and links.
+      </div>
+    </div>
+
+    <div class="mission" onclick="toggleMission(this)">
+      <div class="title">🌐 HTTPS Safety</div>
+      <div class="content">
+        Always check if website uses HTTPS before entering personal data.
+      </div>
+    </div>
+
+    <div class="mission" onclick="toggleMission(this)">
+      <div class="title">📶 Public Wi-Fi Risk</div>
+      <div class="content">
+        Public Wi-Fi can be dangerous. Avoid logging into bank accounts.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="tips.js"></script>
+</body>
+</html>

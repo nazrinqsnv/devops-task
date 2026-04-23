@@ -1,0 +1,59 @@
+body {
+  background: #020617;
+  color: white;
+  font-family: Arial;
+  margin: 0;
+}
+
+.test {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #ff4dff;
+}
+
+.fun-fact {
+  max-width: 600px;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid #00ffaa55;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.quiz-box {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ff4dff33;
+  border-radius: 10px;
+}
+
+.options {
+  text-align: left;
+}
+
+label {
+  display: block;
+  padding: 10px;
+  border: 1px solid #ff4dff;
+  margin: 8px 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #ff4dff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.score-box {
+  display: none;
+  margin-top: 20px;
+}

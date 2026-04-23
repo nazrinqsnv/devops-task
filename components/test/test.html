@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Quiz Challenge</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+
+<section class="test">
+
+  <h2>🧪 Cyber Quiz Challenge</h2>
+  <p class="subtitle">50 real cybersecurity questions</p>
+
+  <div class="fun-fact">
+    <h3>💡 Fun Fact</h3>
+    <p id="factText"></p>
+  </div>
+
+  <div class="quiz-box">
+
+    <h3 id="question"></h3>
+
+    <div class="options">
+      <label><input type="radio" name="opt" value="0"> <span id="o0"></span></label>
+      <label><input type="radio" name="opt" value="1"> <span id="o1"></span></label>
+      <label><input type="radio" name="opt" value="2"> <span id="o2"></span></label>
+    </div>
+
+    <button onclick="submitAnswer()">Submit</button>
+
+    <p id="result"></p>
+
+  </div>
+
+  <div class="score-box" id="scoreBox">
+    <h3>📊 Final Result</h3>
+    <p id="scoreText"></p>
+    <button onclick="restartQuiz()">Restart</button>
+  </div>
+
+</section>
+
+<script src="test.js"></script>
+</body>
+</html>

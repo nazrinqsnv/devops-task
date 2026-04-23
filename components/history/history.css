@@ -1,0 +1,100 @@
+body {
+  background: #020617;
+  color: white;
+  font-family: Arial;
+  margin: 0;
+}
+
+.history {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: #00ffcc;
+}
+
+.subtitle {
+  color: #94a3b8;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  gap: 20px;
+}
+
+/* LIST */
+.list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #00ffcc33;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.item:hover {
+  border-color: #00ffcc;
+}
+
+.item.active {
+  background: #00ffcc;
+  color: black;
+}
+
+/* VIEWER */
+.viewer {
+  flex: 2;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #00ffcc33;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+}
+
+.stage {
+  min-height: 200px;
+  margin-top: 15px;
+  padding: 15px;
+  border: 1px dashed #00ffcc55;
+  border-radius: 8px;
+}
+
+/* BUTTONS */
+.controls {
+  margin-top: 15px;
+}
+
+.controls button {
+  background: transparent;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  padding: 8px 12px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.controls button:hover {
+  background: #00ffcc;
+  color: black;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .dashboard {
+    flex-direction: column;
+  }
+}
