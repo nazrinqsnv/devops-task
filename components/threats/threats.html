@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Threat Game</title>
+
+  <link rel="stylesheet" href="threats.css">
+</head>
+
+<body>
+
+<section class="game">
+
+  <h2>⚠️ Cyber Threat Detection Game</h2>
+  <p class="subtitle">Choose correct risk level for each threat</p>
+
+  <div class="score">
+    🏆 Score: <span id="score">0</span>
+  </div>
+
+  <div class="threats">
+
+    <div class="card" data-answer="high">
+      <h3>🎣 Phishing Email</h3>
+      <p>Fake emails stealing passwords</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="high">
+      <h3>🦠 Malware Download</h3>
+      <p>Hidden malicious software</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="medium">
+      <h3>🌐 Public Wi-Fi</h3>
+      <p>Unsecured network connection</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="high">
+      <h3>💣 Ransomware</h3>
+      <p>Encrypts files for ransom</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="medium">
+      <h3>🕵️ Keylogger</h3>
+      <p>Records keyboard input</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="high">
+      <h3>🌊 DDoS Attack</h3>
+      <p>Server overload attack</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="medium">
+      <h3>📩 Spam Emails</h3>
+      <p>Unwanted email messages</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="high">
+      <h3>🔓 Data Breach</h3>
+      <p>Data leakage from systems</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="medium">
+      <h3>🧠 Social Engineering</h3>
+      <p>Manipulating humans for info</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="high">
+      <h3>🐛 Zero-Day Exploit</h3>
+      <p>Unknown vulnerability attack</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="medium">
+      <h3>📱 Fake App</h3>
+      <p>Malicious mobile app</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="high">
+      <h3>🔐 Credential Stuffing</h3>
+      <p>Using leaked passwords</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="medium">
+      <h3>📡 MITM Attack</h3>
+      <p>Intercepting communication</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="high">
+      <h3>💻 Trojan Horse</h3>
+      <p>Hidden malicious program</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="medium">
+      <h3>🔍 Phishing Link</h3>
+      <p>Fake website URL</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+    <div class="card" data-answer="high">
+      <h3>🧨 Botnet Attack</h3>
+      <p>Infected device network</p>
+      <div class="actions">
+        <button onclick="rate(this,'low')">Low</button>
+        <button onclick="rate(this,'medium')">Medium</button>
+        <button onclick="rate(this,'high')">High</button>
+      </div>
+      <p class="result"></p>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="threats.js"></script>
+</body>
+</html>

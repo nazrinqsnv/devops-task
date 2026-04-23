@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Incident Explorer</title>
+
+  <link rel="stylesheet" href="history.css">
+</head>
+
+<body>
+
+<section class="history">
+
+  <h2>🧠 Cyber Incident Explorer</h2>
+  <p class="subtitle">Click a case to simulate how the attack unfolded</p>
+
+  <div class="dashboard">
+
+    <!-- LEFT LIST -->
+    <div class="list">
+
+      <button class="item active" onclick="openCase(0)">🪱 Morris Worm</button>
+      <button class="item" onclick="openCase(1)">🎣 ILOVEYOU Virus</button>
+      <button class="item" onclick="openCase(2)">💣 WannaCry</button>
+      <button class="item" onclick="openCase(3)">🕵️ SolarWinds</button>
+
+    </div>
+
+    <!-- RIGHT DETAILS -->
+    <div class="viewer">
+
+      <h3 id="title">Morris Worm (1988)</h3>
+
+      <div class="stage" id="stage">
+        <p>Initializing attack simulation...</p>
+      </div>
+
+      <div class="controls">
+        <button onclick="nextStep()">▶ Next Step</button>
+        <button onclick="resetCase()">🔄 Reset</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script src="history.js"></script>
+</body>
+</html>

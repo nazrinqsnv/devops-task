@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cybersecurity</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🔰 CyberSecure</div>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./components/learn/learn.html">Learn</a>
+    <a href="./components/threats/threats.html">Threats</a>
+    <a href="./components/tips/tips.html">Tips</a>
+    <a href="./components/history/history.html">History</a>
+    <a href="./components/test/test.html">Test</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Your Digital Life is Under Attack <span>Every Second</span></h1>
+    <p>Cybersecurity protects systems, networks, and data from attacks.</p>
+    <button>Start Learning</button>
+  </div>
+
+  <div class="fun-box">
+    <h3>Did you know?</h3>
+    <p>4000+ cyber attacks happen every second.</p>
+  </div>
+</section>
+
+<section class="cards">
+
+  <div class="card">
+    <h2>What is Cybersecurity?</h2>
+    <p>Protection of data, devices, and networks.</p>
+  </div>
+
+  <div class="card">
+    <h2>Types of Hackers</h2>
+    <ul>
+      <li>White Hat</li>
+      <li>Black Hat</li>
+      <li>Grey Hat</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Passwords</h2>
+    <p>Weak: 123456 ❌</p>
+    <p>Strong: T9#kL!92x ✅</p>
+  </div>
+
+  <div class="card">
+    <h2>Real Life Risks</h2>
+    <p>Phishing, Fake sites, Unsecure WiFi</p>
+  </div>
+
+</section>
+
+<section class="quiz">
+  <h2>Test Yourself</h2>
+  <p>Which password is stronger?</p>
+
+  <div class="options">
+    <button onclick="checkAnswer(false)">123456</button>
+    <button onclick="checkAnswer(false)">password</button>
+    <button onclick="checkAnswer(true)">T9#kL!92x</button>
+  </div>
+
+  <p id="result"></p>
+</section>
+
+<footer>
+  <p>Stay Safe Online 🔐</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
