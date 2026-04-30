@@ -1,10 +1,6 @@
 name: CI/CD Pipeline
-
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -12,27 +8,42 @@ permissions:
   contents: write
 
 jobs:
+  # ✅ CI HİSSƏSİ
   ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      # 1. HTML fayllarının mövcudluğunu yoxla
+      - name: Check HTML files exist
+        run: |
+          test -f index.html && echo "✅ index.html mövcuddur" || exit 1
 
-      - name: Install dependencies
-        run: npm ci
+      # 2. JS faylının mövcudluğunu yoxla
+      - name: Check JS file exists
+        run: |
+          test -f index.js && echo "✅ index.js mövcuddur" || exit 1
 
-      - name: Run tests
-        run: npm test --if-present
+      # 3. CSS faylının mövcudluğunu yoxla
+      - name: Check CSS file exists
+        run: |
+          test -f index.css && echo "✅ index.css mövcuddur" || exit 1
 
+      # 4. HTML-də checkAnswer funksiyasına link var mı yoxla
+      - name: Check script tag exists in HTML
+        run: |
+          grep -q 'src="index.js"' index.html && echo "✅ Script tag mövcuddur" || exit 1
+
+      # 5. JS-də checkAnswer funksiyası var mı yoxla
+      - name: Check checkAnswer function exists
+        run: |
+          grep -q 'checkAnswer' index.js && echo "✅ checkAnswer funksiyası mövcuddur" || exit 1
+
+  # ✅ CD HİSSƏSİ
   deploy:
-    needs: ci
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: ci  # CI keçmədən deploy olmur!
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
